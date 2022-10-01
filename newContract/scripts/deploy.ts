@@ -1,6 +1,6 @@
 import { ethers } from "hardhat";
 import { NewContract, NewContract__factory } from "../typechain-types";
-//import { NFT } from "../contracts/NewContract";
+import { NFT } from "/contracts/NewContract";
 
 async function main() {
     const Mint: NewContract__factory = await ethers.getContractFactory("NewContract");
@@ -8,6 +8,12 @@ async function main() {
 
     await mint.deployed();
     console.log("newContract deployed to:", mint.address);
+    /*
+    const minting = await mint.NFT();
+    await minting.wait();
+    console.log("Minted NFT");
+    */
+
 };
 
 main().catch((error) => {

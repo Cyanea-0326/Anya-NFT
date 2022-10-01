@@ -12,7 +12,7 @@ contract NewContract is ERC721URIStorage {
     // _tokenIdsを初期化
     Counters.Counter private _tokenIds;
     // NFT トークンの名前とそのシンボルを渡す
-    constructor() ERC721 ("AnyaNFT", "SPY") {
+    constructor() ERC721("AnyaNFT", "SPY") {
     console.log("This is my NFT contract.");
   }
 
